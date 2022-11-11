@@ -211,14 +211,3 @@ static void mqtt_task(void *pvParameters)
     }
  }
 
-
-void app_main()
-{
-    nvs_flash_init();
-    initialise_wifi();
-    xTaskCreate(&mqtt_task, "mqtt_task", 8192, NULL, 5, NULL);
-}
-
-
-
-
